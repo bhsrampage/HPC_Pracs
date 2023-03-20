@@ -13,3 +13,5 @@ comm = MPI.COMM_WORLD
 master_work(rank)
 comm.Barrier()
 comm.bcast("Mission is a success",root=rank)
+
+#mpiexec -n 1 python -m mpi4py .\Experiment2.2_master.py : -n 3 python -m mpi4py .\Experiment2.2_slave.py
